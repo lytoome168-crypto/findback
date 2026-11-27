@@ -23,7 +23,9 @@ const mime = {
 const server = createServer(async (req, res) => {
   const url = new URL(req.url || '/', `http://${req.headers.host || 'localhost'}`);
   const requested = decodeURIComponent(url.pathname);
-  const requestedFile = requested === '/manus-routes.json' ? 'public/manus-routes.json' : (requested === '/' ? 'index.html' : requested);
+  const requestedFile = requested === '/manus-routes.json'
+    ? 'public/manus-routes.json'
+    : (requested.startsWith('/assets/') ? `public${requested}` : (requested === '/' ? 'index.html' : requested));
   const candidate = normalize(join(root, requestedFile));
   const safeCandidate = candidate.startsWith(root) ? candidate : join(root, 'index.html');
   let file = safeCandidate;
