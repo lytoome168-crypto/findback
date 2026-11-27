@@ -275,6 +275,19 @@ textarea.field-control { min-height: 112px; padding-top: 11px; padding-bottom: 1
 .flow-step.active .flow-dot, .flow-step.done .flow-dot { color: #fff; background: var(--teal); border-color: var(--teal); }
 .flow-line { width: min(90px, 12vw); height: 1px; margin: 0 12px; background: var(--line-strong); }
 
+.field-control.is-invalid { border-color: var(--red); background: #fffafa; box-shadow: 0 0 0 3px rgba(193, 82, 82, .1); }
+.type-options.is-invalid { padding: 4px; border: 1px solid rgba(193, 82, 82, .55); border-radius: 13px; }
+.field-error { display: block; margin-top: 5px; color: var(--red); font-size: 11px; line-height: 1.4; }
+.modal-backdrop { position: fixed; z-index: 200; inset: 0; display: grid; place-items: center; padding: 24px; background: rgba(11, 42, 38, .42); opacity: 0; transition: opacity .18s ease; }
+.modal-backdrop.is-open { opacity: 1; }
+.success-modal { position: relative; width: min(430px, 100%); padding: 34px; text-align: center; transform: translateY(12px) scale(.98); transition: transform .18s ease; }
+.modal-backdrop.is-open .success-modal { transform: translateY(0) scale(1); }
+.success-modal-icon { display: grid; width: 54px; height: 54px; margin: 0 auto 17px; place-items: center; color: var(--teal); background: var(--teal-soft); border-radius: 50%; }
+.success-modal-kicker { color: var(--teal); font-family: "DM Mono", monospace; font-size: 9px; letter-spacing: .12em; }
+.success-modal h2 { margin: 10px 0 0; font-size: 25px; letter-spacing: -.04em; }
+.success-modal p { margin: 12px auto 22px; max-width: 310px; color: var(--ink-soft); font-size: 13px; line-height: 1.7; }
+.modal-close { position: absolute; top: 12px; right: 12px; display: grid; width: 32px; height: 32px; place-items: center; color: var(--ink-soft); background: transparent; border: 0; border-radius: 8px; cursor: pointer; }
+.modal-close:hover { color: var(--ink); background: var(--line); }
 #toast-region { position: fixed; z-index: 100; right: 22px; bottom: 22px; display: grid; gap: 10px; pointer-events: none; }
 .toast { display: flex; align-items: flex-start; gap: 10px; width: min(350px, calc(100vw - 44px)); padding: 13px 15px; color: var(--ink); background: var(--white); border: 1px solid var(--line-strong); border-left: 4px solid var(--teal); border-radius: 12px; box-shadow: 0 14px 35px rgba(15,74,65,.16); animation: toast-in .3s ease both; font-size: 12px; line-height: 1.5; }
 .toast.error { border-left-color: var(--red); }
