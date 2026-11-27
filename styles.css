@@ -91,6 +91,7 @@ button { border: 0; cursor: pointer; }
 .page-kicker { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; color: var(--teal); font-family: "DM Mono", monospace; font-size: 11px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; }
 .page-kicker::before { content: ""; width: 28px; height: 1px; background: var(--teal); }
 .page-title { max-width: 760px; margin: 0; font-size: clamp(28px, 4vw, 48px); line-height: 1.12; letter-spacing: -.055em; }
+.publish-page .page-title { font-size: 46px; }
 .page-title em { color: var(--teal); font-style: normal; }
 .page-lead { max-width: 620px; margin: 15px 0 0; color: var(--ink-soft); font-size: 15px; line-height: 1.8; }
 .page-intro { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; margin-bottom: 34px; }
@@ -122,7 +123,7 @@ button { border: 0; cursor: pointer; }
 .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-small); }
 .form-card { padding: clamp(22px, 3.5vw, 38px); }
 .form-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding-bottom: 24px; margin-bottom: 25px; border-bottom: 1px solid var(--line); }
-.form-heading h2 { margin: 0; font-size: 19px; letter-spacing: -.03em; }
+.form-heading h2 { margin: 0; font-size: 26px; letter-spacing: -.03em; }
 .form-heading p { margin: 7px 0 0; color: var(--ink-soft); font-size: 12px; line-height: 1.6; }
 .required-note { color: var(--ink-soft); font-size: 11px; white-space: nowrap; }
 .required-note b { color: var(--red); }
@@ -138,7 +139,7 @@ button { border: 0; cursor: pointer; }
 .type-option input:checked + label { color: var(--teal-dark); background: var(--mint); border-color: #6fc4b5; box-shadow: 0 0 0 3px rgba(111,196,181,.13); }
 .option-icon { display: grid; width: 35px; height: 35px; flex: 0 0 35px; place-items: center; background: var(--teal-soft); border-radius: 10px; }
 .type-option:nth-child(2) .option-icon { background: var(--yellow-soft); color: #9c7018; }
-.option-copy b { display: block; color: var(--ink); font-size: 13px; }
+.option-copy b { display: block; color: var(--ink); font-size: 16px; }
 .option-copy small { display: block; margin-top: 4px; color: var(--ink-soft); font-size: 11px; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 15px; }
 .field { display: flex; flex-direction: column; gap: 7px; }
